@@ -18,6 +18,7 @@ BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Gui)
 BuildRequires: pkgconfig(Qt5Widgets)
 BuildRequires: pkgconfig(Qt5Test)
+BuildRequires: pkgconfig(Qt5UiTools)
 BuildRequires: qmake5
 BuildRequires: extra-cmake-modules5
 Requires: %{libname} = %{EVRD}
