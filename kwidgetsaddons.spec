@@ -40,9 +40,6 @@ Development files (Headers etc.) for %{name}.
 
 %prep
 %setup -q
-%ifarch %{i586}
-%define _disable_ld_no_undefined 1
-%endif
 %cmake_kde5
 
 %build
