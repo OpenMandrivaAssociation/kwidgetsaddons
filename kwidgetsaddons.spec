@@ -12,7 +12,8 @@ Summary: The KDE Frameworks 5 Widgets Library addons
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
-Patch0: kwidgetsaddons-5.39.0-include-finctional.patch
+# (tpg) upstream patch
+Patch0: e7a0d72470e16b074fd1514c5eee6f3306a8f449.patch
 BuildRequires: cmake(ECM)
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Gui)
