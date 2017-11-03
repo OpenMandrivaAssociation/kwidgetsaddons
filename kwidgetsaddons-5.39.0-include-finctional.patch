@@ -1,0 +1,11 @@
+diff -Naur kwidgetsaddons-5.39.0/autotests/kacceleratormanagertest.cpp kwidgetsaddons-5.39.0.tpg/autotests/kacceleratormanagertest.cpp
+--- kwidgetsaddons-5.39.0/autotests/kacceleratormanagertest.cpp	2017-10-07 19:25:33.035430176 +0000
++++ kwidgetsaddons-5.39.0.tpg/autotests/kacceleratormanagertest.cpp	2017-11-03 16:44:01.009397160 +0000
+@@ -21,6 +21,7 @@
+ 
+ #include <QTest>
+ #include <QMenu>
++#include <functional>
+ 
+ #define QSL QStringLiteral
+ 

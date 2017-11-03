@@ -5,13 +5,14 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kwidgetsaddons
-Version:	5.39.0
-Release:	1
+Version: 5.39.0
+Release: 1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: The KDE Frameworks 5 Widgets Library addons
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
+Patch0: kwidgetsaddons-5.39.0-include-finctional.patch
 BuildRequires: cmake(ECM)
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Gui)
@@ -26,7 +27,7 @@ The KDE Frameworks 5 Widgets Library addons.
 %package -n %{libname}
 Summary: The KDE Frameworks 5 Widgets Library addons
 Group: System/Libraries
-Requires:	%{name} = %{EVRD}
+Requires: %{name} = %{EVRD}
 
 %description -n %{libname}
 The KDE Frameworks 5 Widgets Library addons.
@@ -41,6 +42,7 @@ Development files (Headers etc.) for %{name}.
 
 %prep
 %setup -q
+%apply_patches
 %cmake_kde5
 
 %build
